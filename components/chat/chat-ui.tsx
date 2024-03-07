@@ -18,6 +18,7 @@ import { ChatInput } from "./chat-input"
 import { ChatMessages } from "./chat-messages"
 import { ChatScrollButtons } from "./chat-scroll-buttons"
 import { ChatSecondaryButtons } from "./chat-secondary-buttons"
+import { ClickToComponent } from 'click-to-react-component'
 
 interface ChatUIProps {}
 
@@ -186,6 +187,8 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
   }
 
   return (
+    <div>
+    <ClickToComponent />
     <div className="relative flex h-full flex-col items-center">
       <div className="absolute left-4 top-2.5 flex justify-center">
         <ChatScrollButtons
@@ -225,6 +228,7 @@ export const ChatUI: FC<ChatUIProps> = ({}) => {
       <div className="absolute bottom-2 right-2 hidden md:block lg:bottom-4 lg:right-4">
         <ChatHelp />
       </div>
+    </div>
     </div>
   )
 }
